@@ -33,17 +33,19 @@ namespace CustomerManagement
 
         private void CreateOrderButtonClicked(object sender, EventArgs e)
         {
+
         }
 
         private void AddToCartButtonClicked(object sender, EventArgs e)
         {
             AddProductToCart();
+            orderPositionGrid.Update();
         }
 
         private void AddProductToCart()
         {
             var selectedProductCells = productGrid.SelectedRows[0].Cells;
-            var orderID = orderDataManager.InsertOrder(customerID, DateTime.Today, statusTextBox.Text, paymentTermsComboBox.SelectedText);
+            var orderID = orderDataManager.InsertOrder(customerID, dateTimePicker1.Value, statusTextBox.Text, paymentTermsComboBox.SelectedText);
 
             if (sameAddressRadioButton.Checked)
             {
@@ -61,12 +63,12 @@ namespace CustomerManagement
 
         private void OwnAddressRadioButtonCheckedChanged(object sender, EventArgs e)
         {
-            groupBox1.Visible = ownAddressRadioButton.Checked;
+            addressLayoutPanel.Enabled = true;
         }
 
         private void SameAddressRadioButtonCheckedChanged(object sender, EventArgs e)
         {
-            groupBox1.Visible = sameAddressRadioButton.Checked;
+            addressLayoutPanel.Enabled = false;
         }
     }
 }

@@ -33,36 +33,39 @@ namespace CustomerManagement
             this.addCustomerButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.manageOrdersButtons = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.orderGrid = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.customerGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderGrid)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // customerGrid
             // 
             this.customerGrid.AllowUserToAddRows = false;
             this.customerGrid.AllowUserToDeleteRows = false;
-            this.customerGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.customerGrid.BackgroundColor = System.Drawing.Color.White;
             this.customerGrid.ColumnHeadersHeight = 34;
-            this.customerGrid.Location = new System.Drawing.Point(12, 41);
+            this.customerGrid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.customerGrid.Location = new System.Drawing.Point(3, 27);
             this.customerGrid.MultiSelect = false;
             this.customerGrid.Name = "customerGrid";
             this.customerGrid.RowHeadersWidth = 62;
             this.customerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerGrid.ShowEditingIcon = false;
-            this.customerGrid.Size = new System.Drawing.Size(773, 284);
+            this.customerGrid.Size = new System.Drawing.Size(922, 284);
             this.customerGrid.TabIndex = 0;
             // 
             // addCustomerButton
             // 
             this.addCustomerButton.AutoSize = true;
-            this.addCustomerButton.Location = new System.Drawing.Point(646, 331);
+            this.addCustomerButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.addCustomerButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.addCustomerButton.Location = new System.Drawing.Point(3, 311);
             this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(139, 35);
+            this.addCustomerButton.Size = new System.Drawing.Size(922, 35);
             this.addCustomerButton.TabIndex = 1;
             this.addCustomerButton.Text = "Kunde anlegen";
             this.addCustomerButton.UseVisualStyleBackColor = true;
@@ -81,72 +84,78 @@ namespace CustomerManagement
             // manageOrdersButtons
             // 
             this.manageOrdersButtons.AutoSize = true;
-            this.manageOrdersButtons.Location = new System.Drawing.Point(583, 709);
+            this.manageOrdersButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.manageOrdersButtons.Location = new System.Drawing.Point(3, 311);
             this.manageOrdersButtons.Name = "manageOrdersButtons";
-            this.manageOrdersButtons.Size = new System.Drawing.Size(202, 35);
+            this.manageOrdersButtons.Size = new System.Drawing.Size(922, 35);
             this.manageOrdersButtons.TabIndex = 2;
-            this.manageOrdersButtons.Text = "Bestellung anlegen";
+            this.manageOrdersButtons.Text = "Kundenbestellung anlegen";
             this.manageOrdersButtons.UseVisualStyleBackColor = true;
             this.manageOrdersButtons.Click += new System.EventHandler(this.ManageCustomerOrderButtonClicked);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Kunden";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(13, 374);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Bestellungen für Kunde";
             // 
             // orderGrid
             // 
             this.orderGrid.AllowUserToAddRows = false;
             this.orderGrid.AllowUserToDeleteRows = false;
-            this.orderGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.orderGrid.BackgroundColor = System.Drawing.Color.White;
             this.orderGrid.ColumnHeadersHeight = 34;
-            this.orderGrid.Location = new System.Drawing.Point(13, 402);
+            this.orderGrid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.orderGrid.Location = new System.Drawing.Point(3, 27);
             this.orderGrid.MultiSelect = false;
             this.orderGrid.Name = "orderGrid";
             this.orderGrid.ReadOnly = true;
             this.orderGrid.RowHeadersWidth = 62;
             this.orderGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
             this.orderGrid.ShowEditingIcon = false;
-            this.orderGrid.Size = new System.Drawing.Size(773, 284);
+            this.orderGrid.Size = new System.Drawing.Size(922, 284);
             this.orderGrid.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.customerGrid);
+            this.groupBox1.Controls.Add(this.addCustomerButton);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(928, 349);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Kunden";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.AutoSize = true;
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.orderGrid);
+            this.groupBox2.Controls.Add(this.manageOrdersButtons);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 361);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(928, 349);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Kundenbestellungen";
             // 
             // CustomerManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(797, 749);
-            this.Controls.Add(this.orderGrid);
-            this.Controls.Add(this.manageOrdersButtons);
-            this.Controls.Add(this.addCustomerButton);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.customerGrid);
+            this.ClientSize = new System.Drawing.Size(928, 710);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.flowLayoutPanel);
             this.Name = "CustomerManagementForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kunden und Bestellungen verwalten";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.customerGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderGrid)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +167,8 @@ namespace CustomerManagement
         private System.Windows.Forms.Button addCustomerButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Button manageOrdersButtons;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView orderGrid;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
